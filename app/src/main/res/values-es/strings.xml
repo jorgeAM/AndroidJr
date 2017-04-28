@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Principiante</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="saludo">Hola Jorge</string>
+    <string name="descriptionImage">Star Lord</string>
+    <string name="clickme">Apretame</string>
+    <string name="toActivity">ir a Activity</string>
+</resources>

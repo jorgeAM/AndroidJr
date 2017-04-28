@@ -37,9 +37,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/clickme"
-        android:id="@+id/btn"
+        android:id="@+id/btn1"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="177dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toActivity"
+        android:id="@+id/btn2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp" />
 
 </RelativeLayout>

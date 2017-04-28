@@ -1,5 +1,6 @@
 package com.example.sev.newbie;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView texto;
-    Button boton;
+    Button boton1, boton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         //capturamos elementos
         texto = (TextView) findViewById(R.id.texto);
-        boton = (Button) findViewById(R.id.btn);
-        boton.setOnClickListener(this);
+        boton1 = (Button) findViewById(R.id.btn1);
+        boton2 = (Button) findViewById(R.id.btn2);
+        boton1.setOnClickListener(this);
+        boton2.setOnClickListener(this);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -62,6 +65,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), "Diste Click!!", Toast.LENGTH_SHORT).show();
+        switch (v.getId()){
+            case R.id.btn1:
+                Toast.makeText(getApplicationContext(), "Diste Click!!", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.btn2:
+                String cadena = texto.getText().toString();
+                Intent intent = new Intent(this, SecondActivity.class);
+                intent.putExtra("saludo", cadena);
+                startActivity(intent);
+                break;
+        }
     }
 }

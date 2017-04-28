@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">newbie</string>
     <string name="action_settings">Settings</string>
+    <string name="saludo">Hola Jorge</string>
+    <string name="descriptionImage">Star Lord</string>
+    <string name="clickme">Click me!</string>
 </resources>

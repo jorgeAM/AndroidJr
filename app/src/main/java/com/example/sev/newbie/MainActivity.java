@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView texto;
@@ -60,8 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
     public void onClick(View v) {
-        texto.setText("chau");
+        Toast.makeText(getApplicationContext(), "Diste Click!!", Toast.LENGTH_SHORT).show();
     }
 }
